@@ -216,11 +216,20 @@
 
   Router.map(function () {
     this.route('about');
+    this.route('contact');
   });
 
   exports.default = Router;
 });
 ;define('library-app/routes/about', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Route.extend({});
+});
+;define('library-app/routes/contact', ['exports'], function (exports) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -247,7 +256,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "ikf+pGw5", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"About Page\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/about.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "vIMjy/hd", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"About Page\"],[10],[0,\"\\n\\n\"],[7,\"style\"],[9],[0,\"\\n    body {\\n        background-color:blue;\\n    }\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/about.hbs" } });
 });
 ;define("library-app/templates/application", ["exports"], function (exports) {
   "use strict";
@@ -257,13 +266,21 @@
   });
   exports.default = Ember.HTMLBars.template({ "id": "U6C3FW7S", "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"container\"],[9],[0,\"\\n  \"],[15,\"navbar\",[]],[0,\"\\n  \"],[1,[21,\"outlet\"],false],[0,\"\\n\"],[10]],\"hasEval\":true}", "meta": { "moduleName": "library-app/templates/application.hbs" } });
 });
+;define("library-app/templates/contact", ["exports"], function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.HTMLBars.template({ "id": "Izld9DlG", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"Contact\"],[10],[0,\"\\n\\n\"],[7,\"style\"],[9],[0,\"\\n    body {\\n        background-color: yellow;\\n    }\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/contact.hbs" } });
+});
 ;define("library-app/templates/index", ["exports"], function (exports) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "fWVk4NIp", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"Home Page\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/index.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "cRp0pqns", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"Home Page\"],[10],[0,\"\\n\\n\"],[7,\"style\"],[9],[0,\"\\n    body {\\n        background-color:white;\\n    }\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/index.hbs" } });
 });
 ;define("library-app/templates/navbar", ["exports"], function (exports) {
   "use strict";
@@ -271,7 +288,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "KTsUhjbL", "block": "{\"symbols\":[],\"statements\":[[7,\"nav\"],[11,\"class\",\"navbar navbar-inverse\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"container-fluid\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"navbar-header\"],[9],[0,\"\\n      \"],[7,\"button\"],[11,\"class\",\"navbar-toggle collapsed\"],[11,\"data-toggle\",\"collapse\"],[11,\"data-target\",\"#main-navbar\"],[11,\"type\",\"button\"],[9],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"sr-only\"],[9],[0,\"Toggle navigation\"],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n      \"],[10],[0,\"\\n      \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[0,\"Library App\"]],\"parameters\":[]},null],[0,\"\\n    \"],[10],[0,\"\\n\\n    \"],[7,\"div\"],[11,\"class\",\"collapse navbar-collapse\"],[11,\"id\",\"main-navbar\"],[9],[0,\"\\n      \"],[7,\"ul\"],[11,\"class\",\"nav navbar-nav\"],[9],[0,\"\\n            \"],[4,\"link-to\",[\"index\"],[[\"tagName\"],[\"li\"]],{\"statements\":[[7,\"a\"],[11,\"href\",\"\"],[9],[0,\"Home\"],[10]],\"parameters\":[]},null],[0,\"\\n            \"],[4,\"link-to\",[\"about\"],[[\"tagName\"],[\"li\"]],{\"statements\":[[7,\"a\"],[11,\"href\",\"\"],[9],[0,\"About\"],[10]],\"parameters\":[]},null],[0,\"\\n      \"],[10],[0,\"\\n    \"],[10],[2,\" /.navbar-collapse \"],[0,\"\\n  \"],[10],[2,\" /.container-fluid \"],[0,\"\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/navbar.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "FuGtuEET", "block": "{\"symbols\":[],\"statements\":[[7,\"nav\"],[11,\"class\",\"navbar navbar-inverse\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"container-fluid\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"navbar-header\"],[9],[0,\"\\n      \"],[7,\"button\"],[11,\"class\",\"navbar-toggle collapsed\"],[11,\"data-toggle\",\"collapse\"],[11,\"data-target\",\"#main-navbar\"],[11,\"type\",\"button\"],[9],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"sr-only\"],[9],[0,\"Toggle navigation\"],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"icon-bar\"],[9],[10],[0,\"\\n      \"],[10],[0,\"\\n      \"],[4,\"link-to\",[\"index\"],[[\"class\"],[\"navbar-brand\"]],{\"statements\":[[0,\"Library App\"]],\"parameters\":[]},null],[0,\"\\n    \"],[10],[0,\"\\n\\n    \"],[7,\"div\"],[11,\"class\",\"collapse navbar-collapse\"],[11,\"id\",\"main-navbar\"],[9],[0,\"\\n      \"],[7,\"ul\"],[11,\"class\",\"nav navbar-nav\"],[9],[0,\"\\n            \"],[4,\"link-to\",[\"index\"],[[\"tagName\"],[\"li\"]],{\"statements\":[[7,\"a\"],[11,\"href\",\"\"],[9],[0,\"Home\"],[10]],\"parameters\":[]},null],[0,\"\\n            \"],[4,\"link-to\",[\"about\"],[[\"tagName\"],[\"li\"]],{\"statements\":[[7,\"a\"],[11,\"href\",\"\"],[9],[0,\"About\"],[10]],\"parameters\":[]},null],[0,\"\\n            \"],[4,\"link-to\",[\"contact\"],[[\"tagName\"],[\"li\"]],{\"statements\":[[7,\"a\"],[11,\"href\",\"\"],[9],[0,\"contact\"],[10]],\"parameters\":[]},null],[0,\"\\n      \"],[10],[0,\"\\n    \"],[10],[2,\" /.navbar-collapse \"],[0,\"\\n  \"],[10],[2,\" /.container-fluid \"],[0,\"\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/navbar.hbs" } });
 });
 ;
 
@@ -296,7 +313,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("library-app/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"name":"library-app","version":"0.0.0+dd7a401a"});
+            require("library-app/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"name":"library-app","version":"0.0.0+a2acbe23"});
           }
         
 //# sourceMappingURL=library-app.map

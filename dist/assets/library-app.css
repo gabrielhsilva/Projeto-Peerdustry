@@ -5815,6 +5815,7 @@ button.close {
     display: none !important; } }
 
 body {
-  padding-top: 20px; }
+  padding-top: 20px;
+  background-color: yellow; }
 
 /*# sourceMappingURL=library-app.css.map */
