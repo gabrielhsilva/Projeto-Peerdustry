@@ -33,6 +33,31 @@
     }
   });
 });
+;define('library-app/controllers/index', ['exports'], function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = Ember.Controller.extend({
+
+    responseMessage: '',
+    emailAddress: '',
+
+    isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
+    isDisabled: Ember.computed.not('isValid'),
+
+    actions: {
+
+      saveInvitation() {
+        alert(`Saving of the following email address is in progress: ${this.get('emailAddress')}`);
+        this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
+        this.set('emailAddress', '');
+      }
+    }
+
+  });
+});
 ;define('library-app/helpers/app-version', ['exports', 'library-app/config/environment', 'ember-cli-app-version/utils/regexp'], function (exports, _environment, _regexp) {
   'use strict';
 
@@ -280,7 +305,7 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "cRp0pqns", "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"Home Page\"],[10],[0,\"\\n\\n\"],[7,\"style\"],[9],[0,\"\\n    body {\\n        background-color:white;\\n    }\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/index.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "GjL7kM48", "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"jumbotron text-center\"],[9],[0,\"\\n   \"],[7,\"h1\"],[9],[0,\"Coming Soon\"],[10],[0,\"\\n\\n   \"],[7,\"br\"],[9],[10],[7,\"br\"],[9],[10],[0,\"\\n\\n   \"],[7,\"p\"],[9],[0,\"Don't miss our launch date, request an invitation now.\"],[10],[0,\"\\n\\n   \"],[7,\"div\"],[11,\"class\",\"form-horizontal form-group form-group-lg row\"],[9],[0,\"\\n     \"],[7,\"div\"],[11,\"class\",\"col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2\"],[9],[0,\"\\n       \"],[1,[27,\"input\",null,[[\"type\",\"value\",\"class\",\"placeholder\",\"autofocus\"],[\"email\",[23,[\"emailAddress\"]],\"form-control\",\"Please type your e-mail address.\",\"autofocus\"]]],false],[0,\"\\n     \"],[10],[0,\"\\n     \"],[7,\"div\"],[11,\"class\",\"col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3\"],[9],[0,\"\\n       \"],[7,\"button\"],[11,\"class\",\"btn btn-primary btn-lg btn-block\"],[12,\"disabled\",[21,\"isDisabled\"]],[3,\"action\",[[22,0,[]],\"saveInvitation\"]],[9],[0,\"Request invitation\"],[10],[0,\"\\n     \"],[10],[0,\"\\n   \"],[10],[0,\"\\n\\n\"],[4,\"if\",[[23,[\"responseMessage\"]]],null,{\"statements\":[[0,\"     \"],[7,\"div\"],[11,\"class\",\"alert alert-success\"],[9],[1,[21,\"responseMessage\"],false],[10],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n   \"],[7,\"br\"],[9],[10],[7,\"br\"],[9],[10],[0,\"\\n\\n\"],[10],[0,\"\\n\\n\"],[7,\"style\"],[9],[0,\"\\n    body {\\n        background-color:white;\\n    }\\n\"],[10]],\"hasEval\":false}", "meta": { "moduleName": "library-app/templates/index.hbs" } });
 });
 ;define("library-app/templates/navbar", ["exports"], function (exports) {
   "use strict";
@@ -313,7 +338,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("library-app/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"name":"library-app","version":"0.0.0+a2acbe23"});
+            require("library-app/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"name":"library-app","version":"0.0.0+c3f8e55c"});
           }
         
 //# sourceMappingURL=library-app.map

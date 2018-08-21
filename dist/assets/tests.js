@@ -10,6 +10,11 @@ define('library-app/tests/app.lint-test', [], function () {
     assert.ok(false, 'app.js should pass ESLint\n\n1:25 - Unable to resolve path to module \'@ember/application\'. (import/no-unresolved)\n3:1 - \'ember-load-initializers\' should be listed in the project\'s dependencies, not devDependencies. (import/no-extraneous-dependencies)\n3:1 - `ember-load-initializers` import should occur before import of `./resolver` (import/order)\n4:20 - Unable to resolve path to module \'./config/environment\'. (import/no-unresolved)\n9:11 - Missing trailing comma. (comma-dangle)');
   });
 
+  QUnit.test('controllers/index.js', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/index.js should pass ESLint\n\n1:24 - Unable to resolve path to module \'@ember/controller\'. (import/no-unresolved)\n2:28 - Unable to resolve path to module \'@ember/object/computed\'. (import/no-unresolved)\n15:7 - Unexpected alert. (no-alert)\n15:7 - \'alert\' is not defined. (no-undef)\n18:6 - Missing trailing comma. (comma-dangle)\n19:4 - Missing trailing comma. (comma-dangle)');
+  });
+
   QUnit.test('resolver.js', function (assert) {
     assert.expect(1);
     assert.ok(false, 'resolver.js should pass ESLint\n\n1:1 - \'ember-resolver\' should be listed in the project\'s dependencies, not devDependencies. (import/no-extraneous-dependencies)');
@@ -47,6 +52,11 @@ define('library-app/tests/tests.lint-test', [], function () {
     assert.ok(false, 'test-helper.js should pass ESLint\n\n1:25 - Unable to resolve path to module \'../app\'. (import/no-unresolved)\n3:1 - \'@ember/test-helpers\' should be listed in the project\'s dependencies. Run \'npm i -S @ember/test-helpers\' to add it (import/no-extraneous-dependencies)\n3:1 - `@ember/test-helpers` import should occur before import of `../app` (import/order)\n4:1 - \'ember-qunit\' should be listed in the project\'s dependencies. Run \'npm i -S ember-qunit\' to add it (import/no-extraneous-dependencies)\n4:1 - `ember-qunit` import should occur before import of `../app` (import/order)');
   });
 
+  QUnit.test('unit/controllers/index-test.js', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'unit/controllers/index-test.js should pass ESLint\n\n1:1 - \'qunit\' should be listed in the project\'s dependencies. Run \'npm i -S qunit\' to add it (import/no-extraneous-dependencies)\n2:1 - \'ember-qunit\' should be listed in the project\'s dependencies. Run \'npm i -S ember-qunit\' to add it (import/no-extraneous-dependencies)\n4:37 - Unexpected unnamed function. (func-names)\n4:37 - Unexpected function expression. (prefer-arrow-callback)\n4:45 - Missing space before function parentheses. (space-before-function-paren)\n8:21 - Unexpected unnamed function. (func-names)\n8:29 - Missing space before function parentheses. (space-before-function-paren)\n9:9 - \'controller\' is never reassigned. Use \'const\' instead. (prefer-const)');
+  });
+
   QUnit.test('unit/routes/about-test.js', function (assert) {
     assert.expect(1);
     assert.ok(false, 'unit/routes/about-test.js should pass ESLint\n\n1:1 - \'qunit\' should be listed in the project\'s dependencies. Run \'npm i -S qunit\' to add it (import/no-extraneous-dependencies)\n2:1 - \'ember-qunit\' should be listed in the project\'s dependencies. Run \'npm i -S ember-qunit\' to add it (import/no-extraneous-dependencies)\n4:32 - Unexpected unnamed function. (func-names)\n4:32 - Unexpected function expression. (prefer-arrow-callback)\n4:40 - Missing space before function parentheses. (space-before-function-paren)\n7:21 - Unexpected unnamed function. (func-names)\n7:29 - Missing space before function parentheses. (space-before-function-paren)\n8:9 - \'route\' is never reassigned. Use \'const\' instead. (prefer-const)');
@@ -55,6 +65,19 @@ define('library-app/tests/tests.lint-test', [], function () {
   QUnit.test('unit/routes/contact-test.js', function (assert) {
     assert.expect(1);
     assert.ok(false, 'unit/routes/contact-test.js should pass ESLint\n\n1:1 - \'qunit\' should be listed in the project\'s dependencies. Run \'npm i -S qunit\' to add it (import/no-extraneous-dependencies)\n2:1 - \'ember-qunit\' should be listed in the project\'s dependencies. Run \'npm i -S ember-qunit\' to add it (import/no-extraneous-dependencies)\n4:34 - Unexpected unnamed function. (func-names)\n4:34 - Unexpected function expression. (prefer-arrow-callback)\n4:42 - Missing space before function parentheses. (space-before-function-paren)\n7:21 - Unexpected unnamed function. (func-names)\n7:29 - Missing space before function parentheses. (space-before-function-paren)\n8:9 - \'route\' is never reassigned. Use \'const\' instead. (prefer-const)');
+  });
+});
+define('library-app/tests/unit/controllers/index-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
+  'use strict';
+
+  (0, _qunit.module)('Unit | Controller | index', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let controller = this.owner.lookup('controller:index');
+      assert.ok(controller);
+    });
   });
 });
 define('library-app/tests/unit/routes/about-test', ['qunit', 'ember-qunit'], function (_qunit, _emberQunit) {
